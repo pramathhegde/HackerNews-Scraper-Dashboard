@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 # Go to project folder
 cd C:/Desktop/PROJECTS/news-scraper
