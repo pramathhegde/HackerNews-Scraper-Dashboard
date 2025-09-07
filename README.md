@@ -1,5 +1,7 @@
-cd C:/Desktop/PROJECTS/news-scraper  # go to your project folder
+# Go to your project folder
+cd C:/Desktop/PROJECTS/news-scraper
 
+# Create README.md
 cat > README.md <<EOL
 # HackerNews Scraper Dashboard
 
@@ -78,3 +80,12 @@ npm start
 ## Author
 Pramath Hegde
 EOL
+
+# Add README to git
+git add README.md
+
+# Commit changes
+git commit -m "Add README for HackerNews Scraper Dashboard"
+
+# Push to GitHub
+git push origin main
