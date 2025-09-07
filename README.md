@@ -1,4 +1,4 @@
-cat > README.md <<'EOL'
+@"
 # HackerNews Scraper Dashboard
 
 A full-stack dashboard that fetches and displays real-time Hacker News headlines using Python Flask and ReactJS.
@@ -12,21 +12,17 @@ A full-stack dashboard that fetches and displays real-time Hacker News headlines
 ## How to Run Locally
 
 ### Backend
-\`\`\`bash
 cd backend
 python -m venv venv        # optional, create virtual env
 venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 python api.py
-\`\`\`
 - Backend runs at: http://localhost:5000
 
 ### Frontend
-\`\`\`bash
 cd frontend
 npm install
 npm start
-\`\`\`
 - Frontend runs at: http://localhost:3000
 
 ## Usage
@@ -40,6 +36,6 @@ npm start
 
 ## Author
 Pramath Hegde
-EOL
+"@ > README.md
 
-echo "✅ README.md created successfully!"
+Write-Host "✅ README.md created successfully!"
