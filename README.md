@@ -1,104 +1,43 @@
-# 1️⃣ Navigate to project folder
-cd C:/Desktop/PROJECTS/news-scraper || { echo "Project folder not found!"; exit 1; }
+#!/bin/bash
 
-# 2️⃣ Remove any embedded Git repos (if needed)
-rm -rf frontend/.git
-rm -rf backend/.git
+# Go to project folder
+cd C:/Desktop/PROJECTS/news-scraper
 
-# 3️⃣ Initialize git if not already
-git init
-
-# 4️⃣ Create a clean README.md
+# Create a simple README.md
 cat > README.md <<'EOL'
 # HackerNews Scraper Dashboard
+
 A full-stack dashboard that fetches and displays real-time Hacker News headlines using Python Flask and ReactJS.
 
----
+## Overview
+- Scrapes latest headlines from Hacker News.
+- Displays them in a clean, interactive ReactJS frontend.
+- Backend fetches data using Python, BeautifulSoup, and Flask.
+- Frontend updates automatically by calling the local API.
 
-## Features
-- Scrapes latest headlines from [Hacker News](https://news.ycombinator.com/)
-- Displays headlines in a clean ReactJS frontend
-- Fully functional locally without deployment
+## How it works
+1. The Flask backend runs a scraper (`scraper.py`) that fetches the latest headlines.
+2. An API endpoint (`api.py`) serves these headlines in JSON format.
+3. The ReactJS frontend fetches this JSON and displays the headlines in the browser.
 
----
-
-## Tech Stack
-- **Backend:** Python, Flask, BeautifulSoup, Requests
-- **Frontend:** ReactJS, HTML, CSS
-- **Other Tools:** Flask-CORS
-
----
-
-## Project Structure
-news-scraper/
-│
-├── backend/ # Flask backend
-│ ├── api.py # Main API file
-│ ├── scraper.py # Scraper logic
-│ ├── requirements.txt # Python dependencies
-│
-├── frontend/ # ReactJS frontend
-│ ├── src/ # React components and CSS
-│ ├── public/ # HTML and assets
-│ └── package.json # React dependencies & scripts
-│
-└── README.md # Project documentation
-
-text
-
----
-
-## Installation & Run Locally
-
-### Backend
-cd backend
-python -m venv venv # optional, create virtual env
-venv\Scripts\activate # activate on Windows
-pip install -r requirements.txt
-python api.py
-
-text
-The backend runs on: http://localhost:5000
-
-### Frontend
-cd frontend
-npm install
-npm start
-
-text
-The frontend runs on: http://localhost:3000
-
-Open in your browser and see Hacker News headlines.
-
----
-
-## Usage
-- The React frontend fetches live headlines from your local Flask backend.
-- Clicking a headline will take you to the original Hacker News page.
-
----
-
-## Notes
-- Currently works locally; deployment is optional.
-- For real-time remote usage, deploy the backend and update the frontend API URL.
-
----
+## Why it’s useful
+- Quickly see trending news from Hacker News in one dashboard.
+- Learn how to integrate web scraping with a frontend UI.
+- Works fully locally without needing deployment.
 
 ## Author
 Pramath Hegde
 EOL
 
-# 5️⃣ Add all files to git
+# Add all files to git
 git add .
 
-# 6️⃣ Commit changes
-git commit -m "Add HackerNews Scraper Dashboard project with backend and frontend"
+# Commit
+git commit -m "Add simplified README for HackerNews Scraper Dashboard"
 
-# 7️⃣ Set remote origin (replace URL if needed)
+# Push to GitHub
 git remote add origin https://github.com/pramathhegde/HackerNews-Scraper-Dashboard.git
-
-# 8️⃣ Push to GitHub
 git branch -M main
 git push -u origin main --force
 
-echo "✅ Project files and README pushed to GitHub successfully!"
+echo "✅ Simplified README pushed successfully!"
